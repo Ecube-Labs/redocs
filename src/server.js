@@ -11,6 +11,10 @@ const refs = JSON.parse(process.env.DOC_SPECS);
 app.use(koaStatic("src/static"));
 app.use(router.middleware());
 
+router.get("/ping", async (ctx) => {
+  ctx.body = "pong";
+});
+
 router.get("/server-variables.js", async (ctx) => {
   const specUrls = refs.map((r) => ({
     ...r,
