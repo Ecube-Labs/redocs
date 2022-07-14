@@ -1,0 +1,26 @@
+{
+  "name": "redocs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ecube-Labs/redocs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ecube-Labs/redocs/issues"
+  },
+  "homepage": "https://github.com/Ecube-Labs/redocs#readme",
+  "dependencies": {
+    "@koa/router": "^11.0.1",
+    "axios": "^0.27.2",
+    "koa": "^2.13.4",
+    "koa-static": "^5.0.0"
+  }
+}
