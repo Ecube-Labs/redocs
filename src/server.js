@@ -32,7 +32,7 @@ router.get("/api-spec.json", async (ctx) => {
 
   const { data } = await axios.get(ref.url, {
     headers: {
-      authorization: "Token ???", // TODO: token
+      authorization: process.env.PROXY_AUTH_TOKEN,
     },
   });
   ctx.set("Content-Type", "application/json");
