@@ -37,16 +37,16 @@ function bindLocationChange(callback) {
 
 function getSpecName() {
   const queryParams = new URLSearchParams(window.location.search);
-  return queryParams.get("specName") || specUrls[0].name;
+  return queryParams.get("name") || specUrls[0].name;
 }
 
-function changeSpec(specName) {
-  if (specName !== getSpecName()) {
-    history.pushState({}, "", "?specName=" + specName);
+function changeSpec(name) {
+  if (name !== getSpecName()) {
+    history.pushState({}, "", "?name=" + name);
   }
-  document.title = `${specName} | API Documentation`;
+  document.title = `${name} | API Documentation`;
 
-  const spec = specUrls.find((s) => s.name === specName);
+  const spec = specUrls.find((s) => s.name === name);
   Redoc.init(spec.url);
 }
 
